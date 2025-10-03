@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimalist To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h2>📝 Get it Done!</h2>
+      <button id="toggleTheme">🌙</button>
+    </div>
+
+    <ul class="todo-list">
+        <li>
+        <input type="checkbox" id="task1">
+        <label for="task1">Sholat Taubat</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task2">
+        <label for="task2">Sholat Tahajud</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task3">
+        <label for="task3">Istigfar 100x/hari</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task4">
+        <label for="task4">Sholawat 100x/hari</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task5">
+        <label for="task5">Tahsin</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task6">
+        <label for="task6">Sholat Berjamaah</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task7">
+        <label for="task7">Tadarus</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task8">
+        <label for="task8">Puasa Senen/Kemis</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task9">
+        <label for="task9">Gym</label>
+        </li>
+        <li>
+        <input type="checkbox" id="task10">
+        <label for="task10">Asmaul Husna</label>
+        </li>
+    </ul>
+    </div>
+
+    <script>
+    const toggleBtn = document.getElementById("toggleTheme");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+        toggleBtn.textContent = "☀️";
+        } else {
+        toggleBtn.textContent = "🌙";
+        }
+    });
+    </script>
+</body>
+</html>
